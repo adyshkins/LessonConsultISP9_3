@@ -1,0 +1,101 @@
+﻿<Window x:Class="LessonConsultISP9_3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LessonConsultISP9_3"
+        mc:Ignorable="d"
+        Title="Lesson" 
+        Height="450" 
+        Width="400"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="ToolWindow"
+        ResizeMode="NoResize">
+    <Grid>  
+        <!-- Разлиновка окна -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Регистрация"
+                   Grid.Row="0"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   FontSize="20"
+                   Foreground="Black"
+                   FontWeight="Bold" 
+                   FontFamily="Times New Roman"
+                   Style="{StaticResource TextBlockStyle1}"/>
+
+        <TextBlock Text="Логин"
+                   Grid.Row="1"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   FontSize="15"
+                   Foreground="Black"
+                   FontWeight="Bold" 
+                   FontFamily="Times New Roman"/>
+
+        <TextBox Grid.Row="2"
+                 Margin="100 10"
+                 FontSize="15"
+                 Foreground="Black"
+                 FontWeight="Bold" 
+                 FontFamily="Times New Roman"
+                 VerticalContentAlignment="Center"/>
+
+        <TextBlock Text="Пароль"
+                   Grid.Row="3"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   FontSize="15"
+                   Foreground="Black"
+                   FontWeight="Bold" 
+                   FontFamily="Times New Roman"/>
+
+        <TextBox Grid.Row="4"
+                 Margin="100 10"
+                 FontSize="15"
+                 Foreground="Black"
+                 FontWeight="Bold" 
+                 FontFamily="Times New Roman"
+                 VerticalContentAlignment="Center"/>
+
+        <CheckBox Grid.Row="5" 
+                  HorizontalAlignment="Center"
+                  VerticalAlignment="Center"
+                  Content="Запомни меня"/>
+
+        <Button Content="Войти" 
+                Grid.Row="6"
+                Margin="150 10"
+                FontSize="15"
+                Foreground="#FFF"
+                Background="#FF283364"
+                FontWeight="Bold" 
+                FontFamily="Times New Roman"
+                VerticalContentAlignment="Center"/>
+
+        <!-- Последняя строка -->
+        <Grid Grid.Row="7">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0"
+                    Content="Восстановить пароль"
+                    Foreground="Gray"/>
+            <Button Grid.Column="1"
+                    Content="Зарегистрироваться"
+                    Foreground="Gray"/>
+            
+        </Grid>
+    </Grid>
+</Window>
