@@ -60,7 +60,7 @@
                    FontWeight="Bold" 
                    FontFamily="Times New Roman"/>
 
-        <TextBox Grid.Row="4"
+        <PasswordBox Grid.Row="4"
                  Margin="100 10"
                  FontSize="15"
                  Foreground="Black"
