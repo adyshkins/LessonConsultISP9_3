@@ -24,5 +24,30 @@ namespace LessonConsultISP9_3
         {
             InitializeComponent();
         }
+
+
+        private void btnSignIn_Click(object sender, RoutedEventArgs e)
+        {
+            Win2 w2 = new Win2();
+            this.Hide();
+            w2.ShowDialog();
+            this.Show();
+        }
+
+        private void txtLogin_GotFocus(object sender, RoutedEventArgs e)
+        {
+            txtLogin.Foreground = Brushes.Black;
+            if(txtLogin.Text == "Введите логин")
+                txtLogin.Clear();            
+        }
+
+        private void txtLogin_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if (txtLogin.Text == "")
+            {
+                txtLogin.Text = "Введите логин";
+                txtLogin.Foreground = Brushes.Gray;
+            }
+        }
     }
 }

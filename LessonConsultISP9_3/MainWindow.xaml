@@ -43,13 +43,17 @@
                    FontWeight="Bold" 
                    FontFamily="Times New Roman"/>
 
-        <TextBox Grid.Row="2"
+        <TextBox x:Name="txtLogin" 
+                 Grid.Row="2"
                  Margin="100 10"
                  FontSize="15"
-                 Foreground="Black"
+                 Foreground="Gray"
                  FontWeight="Bold" 
                  FontFamily="Times New Roman"
-                 VerticalContentAlignment="Center"/>
+                 VerticalContentAlignment="Center"
+                 Text="Введите логин" 
+                 GotFocus="txtLogin_GotFocus"
+                 LostFocus="txtLogin_LostFocus"/>
 
         <TextBlock Text="Пароль"
                    Grid.Row="3"
@@ -66,14 +70,16 @@
                  Foreground="Black"
                  FontWeight="Bold" 
                  FontFamily="Times New Roman"
-                 VerticalContentAlignment="Center"/>
+                 VerticalContentAlignment="Center"
+                     ToolTip="Пароль больше 6 символов"/>
 
         <CheckBox Grid.Row="5" 
                   HorizontalAlignment="Center"
                   VerticalAlignment="Center"
                   Content="Запомни меня"/>
 
-        <Button Content="Войти" 
+        <Button x:Name="btnSignIn" 
+                Content="Войти" 
                 Grid.Row="6"
                 Margin="150 10"
                 FontSize="15"
@@ -81,9 +87,10 @@
                 Background="#FF283364"
                 FontWeight="Bold" 
                 FontFamily="Times New Roman"
-                VerticalContentAlignment="Center"/>
+                VerticalContentAlignment="Center"
+                Click="btnSignIn_Click"/>
 
-        <!-- Последняя строка -->
+        <!-- Последняя строка... -->
         <Grid Grid.Row="7">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
